@@ -1,0 +1,13 @@
+<div *ngIf="albums.length > 0; else noAlbums">
+  <h2>Lista de Álbumes</h2>
+  <ul>
+    <li *ngFor="let album of albums">
+      <strong>{{ album.Titulo }}</strong> - {{ album.Artista }}
+      <p><em>{{ album.AnoLanzamiento }}</em></p>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noAlbums>
+  <p>No hay álbumes disponibles.</p>
+</ng-template>
